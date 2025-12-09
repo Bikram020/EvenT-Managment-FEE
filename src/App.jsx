@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 import './App.css'
 
+const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:5000'
+
 function App() {
   const [events, setEvents] = useState([])
   const [loading, setLoading] = useState(true)
@@ -27,7 +29,7 @@ function App() {
   const fetchEvents = async (nameQuery = '', dateQuery = '') => {
     try {
       setLoading(true)
-      let url = 'http://localhost:5000/events'
+      let url = `${API_URL}/events`
       const params = []
       
       if (nameQuery) params.push(`name=${encodeURIComponent(nameQuery)}`)
@@ -72,7 +74,7 @@ function App() {
         date: newEvent.date
       }
 
-      await axios.post('http://localhost:5000/events', eventToAdd)
+      await axios.post(`${API_URL}/events`, eventToAdd)
       setEvents([...events, eventToAdd])
       setNewEvent({ name: '', date: '' })
       setShowAddForm(false)
@@ -90,7 +92,7 @@ function App() {
     }
 
     try {
-      await axios.put(`http://localhost:5000/events/${editingEvent.id}`, {
+      await axios.put(`${API_URL}/events/${editingEvent.id}`, {
         name: editingEvent.name,
         date: editingEvent.date
       })
@@ -116,7 +118,7 @@ function App() {
 
     try {
       console.log('Deleting event with ID:', eventId, 'Type:', typeof eventId)
-      await axios.delete(`http://localhost:5000/events/${eventId}`)
+      await axios.delete(`${API_URL}/events/${eventId}`)
       setEvents(events.filter(event => event.id !== eventId))
       setError('')
     } catch (err) {
@@ -190,7 +192,7 @@ function App() {
     }
 
     try {
-      await axios.post('http://localhost:5000/applications', {
+      await axios.post(`${API_URL}/applications`, {
         eventId: applyingEventId,
         studentName: applicationData.studentName,
         email: applicationData.email,
