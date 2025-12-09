@@ -1,0 +1,229 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+  background-color: #f5f5f5;
+}
+
+.app {
+  max-width: 800px;
+  margin: 0 auto;
+  background: white;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+h1 {
+  color: #333;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+button {
+  background: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+button:hover {
+  background: #0056b3;
+}
+
+.error {
+  background: #ffebee;
+  color: #c62828;
+  padding: 10px;
+  border-radius: 4px;
+  margin-bottom: 20px;
+  border-left: 4px solid #c62828;
+}
+
+.add-form {
+  background: #f8f9fa;
+  padding: 20px;
+  border-radius: 4px;
+  margin-bottom: 20px;
+}
+
+.edit-form {
+  background: #fff3cd;
+  padding: 20px;
+  border-radius: 4px;
+  margin-bottom: 20px;
+  border: 1px solid #ffeaa7;
+}
+
+.edit-form h3 {
+  margin: 0 0 15px 0;
+  color: #856404;
+}
+
+.add-form input, .edit-form input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.edit-form button {
+  margin-right: 10px;
+}
+
+.events {
+  display: grid;
+  gap: 15px;
+}
+
+.event {
+  border: 1px solid #ddd;
+  padding: 15px;
+  border-radius: 4px;
+  background: white;
+}
+
+.event h3 {
+  margin: 0 0 10px 0;
+  color: #333;
+}
+
+.event p {
+  margin: 0 0 10px 0;
+  color: #666;
+}
+
+.edit-btn {
+  background: #ffc107;
+  color: #212529;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.edit-btn:hover {
+  background: #e0a800;
+}
+
+.delete-btn {
+  background: #dc3545;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.delete-btn:hover {
+  background: #c82333;
+}
+
+.event-buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+/* Search Section Styles */
+.search-section {
+  background: #f8f9fa;
+  padding: 20px;
+  border-radius: 4px;
+  margin-bottom: 20px;
+  border: 1px solid #dee2e6;
+}
+
+.search-section h3 {
+  margin-top: 0;
+  margin-bottom: 15px;
+  color: #495057;
+}
+
+.search-inputs {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.search-inputs input {
+  flex: 1;
+  min-width: 150px;
+  padding: 8px 12px;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.search-inputs button {
+  margin-bottom: 0;
+  padding: 8px 16px;
+  font-size: 14px;
+}
+
+.search-inputs button:last-child {
+  background: #6c757d;
+}
+
+.search-inputs button:last-child:hover {
+  background: #545b62;
+}
+
+/* Apply Button and Form Styles */
+.apply-btn {
+  background: #28a745;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 12px;
+  margin-right: 5px;
+}
+
+.apply-btn:hover {
+  background: #218838;
+}
+
+.apply-form {
+  background: #e8f5e8;
+  padding: 20px;
+  border-radius: 4px;
+  margin-bottom: 20px;
+  border: 1px solid #28a745;
+}
+
+.apply-form h3 {
+  margin-top: 0;
+  color: #155724;
+}
+
+.apply-form input {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+  border: 1px solid #c3e6cb;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.apply-form button {
+  margin-right: 10px;
+  margin-bottom: 0;
+}
+
+.apply-form button[type="submit"] {
+  background: #28a745;
+}
+
+.apply-form button[type="submit"]:hover {
+  background: #218838;
+}
